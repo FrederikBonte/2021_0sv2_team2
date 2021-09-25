@@ -1,0 +1,66 @@
+<html>
+<head>
+	<title>ROC van Twente - GIT project</title>
+	<link rel="stylesheet" href="styles/style.css" type="text/css" />
+</head>
+<body>
+	<h1>Mijn eerste GIT bestand</h1>
+	<h2>Herhaling</h2>
+	<p>
+		GIT kan wijzigingen in tekst bestanden herkennen en opslaan.
+		Op die manier is het makkelijk om bij te houden wat er veranderd
+		is gedurende het project en ook wie die wijzigingen gemaakt heeft.
+	</p>
+	<p>
+		GIT houdt die informatie bij in de <i>.git</i> map.
+		Dit is in principe een soort database met alle informatie er in
+		over de inhoud, de wijzigingen en de status van alle bestanden
+		in de &quot;<i>Working Directory</i>&quot;.<br />
+		Alle andere GIT folders bestaan alleen in de database.
+		<img src="resources/images/git_folders.png" alt="Weergave van de stash, working directory, staging area, local repository en upstream repository"/>
+		In de staging area worden alle bestanden die horen bij een wijziging verzameld zodat de hele wijziging als 
+		&eacute;&eacute;n set toegevoegd worden aan de local repository. Voorzien van het juiste commentaar.
+		Daarna is er de optie om de wijziging door te sturen naar de upstream repository. Dat kan een eigen GIT server zijn, of natuurlijk github.com
+	</p>
+	<h2>GIT Commando's</h2>
+	<h3>Status</h3>
+	<pre class="code">
+		git status
+	</pre>	
+	<p>
+		GIT status laat zien hoe de working directory er aan toe is. Het kan zijn dat je halverwege een wijziging bent. (Er zijn dan nog dingen om naar de locale repository te sturen.)
+		Of de working directory is helemaal schoon. 
+		&quot;<i>Nothing to commit</i>&quot;
+		Dat is de status die nodig is om aan een nieuwe wijziging te beginnnen.
+	</p>
+	<h3>Add</h3>
+	<pre class="code">
+		git add jouwbestand
+		git add jouwanderebestand
+		enz.
+	</pre>	
+	<p>
+		Nadat je een wijziging hebt doorgevoerd wil je de gewijzigde bestanden toevoegen aan de repository.<br />
+		Het is heel verleidelijk om ieder bestand gewoon stuk voor stuk toe te voegen, maar &eacute;&eacute;n wijziging die over meerdere bestanden verdeeld is wil je ook op die manier opslaan.
+	</p>
+	<h3>Status</h3>
+	<pre class="code">
+		git status
+	</pre>	
+	<p>
+		Wacht even deze hadden we toch al gehad?<br />
+		Ja, dat klopt. Na het stagen van alle bestanden wil je checken dat je niks vergeten bent. Je <b>MOET</b> nogmaals git status uitvoeren om dat te bevestigen.<br />
+		Anders moet je alsnog een tweede stage en commit doen en dat proberen we juist te voorkomen.
+	</p>
+	<h3>Commit</h3>
+	<pre class="code">
+		git commit -m "Beschrijf jouw wijzigingen"
+	</pre>	
+	<p>
+		Met dit commando worden de wijzigingen in de benodigde bestanden 
+		opgeslagen in de repository.<br />
+		Het belangrijkste hierbij is dat je duidelijk beschrijft wat je gewijzigd hebt. Zodat deze set van updates makkelijk terug gevonden kan worden.<br />
+		Gedetaileerd commentaar zal waarschijnlijk in het document zelf gefonden worden.
+	</p>
+</body>
+</html>
