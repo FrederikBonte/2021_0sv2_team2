@@ -1,0 +1,92 @@
+<html>
+<head>
+	<title>ROC van Twente - GIT project</title>
+	<link rel="stylesheet" href="styles/style.css" type="text/css" />
+</head>
+<body>
+	<h1>Branches</h1>
+	<h2>Herhaling</h2>
+	<p>
+		GIT kan wijzigingen in tekst bestanden herkennen en opslaan.
+		Op die manier is het makkelijk om bij te houden wat er veranderd
+		is gedurende het project en ook wie die wijzigingen gemaakt heeft.
+	</p>
+	<h3>Commando's</h3>
+	<ul>
+		<li><span class="code">git status</span></li>
+		<li><span class="code">git add [file]</span></li>
+		<li><span class="code">git add -m "[message]"</span></li>
+		<li><span class="code">git pull</span></li>
+		<li><span class="code">git push</span></li>
+	</ul>	
+	<p>
+		GIT houdt die informatie bij in de <i>.git</i> map. (<span class="code">git init</span>)
+		Dit is in principe een soort database met alle informatie er in
+		over de inhoud, de wijzigingen en de status van alle bestanden
+		in de &quot;<i>Working Directory</i>&quot;.<br />
+		In de staging area worden alle bestanden die horen bij een wijziging verzameld. (<span class="code">git add [<i>filename</i>]</span>)<br />
+		Waarna de hele wijziging als &eacute;&eacute;n set toegevoegd worden aan de local repository.  Voorzien van het juiste commentaar. (<span class="code">git commit -m "<i>Jouw commentaar</i>"]</span>)<br />
+		Daarna is er de optie om de wijziging door te sturen naar de upstream repository. (<span class="code">git push</span>) Dat kan een eigen GIT server zijn, of natuurlijk github.com
+	</p>
+	<h2>Wat zijn branches?</h2>
+	<h3>Waarom branches</h3>
+	<p>
+		Zolang je slechts kleine wijzigingen doet in de applicatie is het gebruik van branches in principe niet nodig. Ook in deze webpagina is het misschien wat overdreven.
+	</p>
+	<p>
+		Branches worden onmisbaar wanneer een teamlid voor langere tijd met een grote wijziging (De term daarvoor is &quot;<i>feature</i>&quot;) bezig is. Dit soort grote features worden meestal verdeeld in kleinere behapbare wijzigingen die samen een grote nieuwe mogelijkheid voor de software opleveren.
+	</p>
+	<ul>
+		<li>Toevoegen of herzien van een nieuwe database</li>
+		<li>Vervangen van het belichtingssysteem</li>
+		<li>Een nieuw scherm met alle bijbehorende knoppen en acties</li>
+	</ul>
+	<h3>Hoe werkt dat?</h3>
+	<p>
+		Alle commando's die we tot nog toe gebruikt hebben functioneren binnen &eacute;&eacute;n branch. Deze branch is de hoofd tak. De gebruikelijke naam daarvoor is &quot;master&quot; of &quot;main&quot;.
+	</p>
+	<p>
+		Deze master branch heeft verder geen bijzondere status. Het is mogelijk en zelfs aan te raden om een afgebakende hoeveelheid werk uit te voeren binnen een andere branch. 
+	</p>
+	<p>
+		Wanneer je wisselt naar een andere branch, werkt je verder op precies dezelfde manier. Totdat jouw hele werk gereed is en je alle wijzigingen in &eacute;&eacute;n klap toevoegt aan de hoofd (&quot;master&quot;) branch. Deze hoofd branch wordt dan in &eacute;&eacute;n keer voorzien van een nieuwe feature.
+	</p>
+	<h3>Waarom branches?</h3>
+	<p>
+		De laatste reden om te werken in een branch is zodat de betrokken personen uitgebreid de tijd hebben om de nieuwe feature van de software te bouwen en te testen zonder dat de hoofd branch tijdelijk buiten gebruik is. 
+	</p>
+	<p>
+		Door deze manier van werken blijven alle features van werken met GIT ter beschikking. Iedere dag kan een afgeronde wijziging worden gecommit en gepusht naar de centrale server. En alle leden van het sub-team kunnen die wijzigingen delen met elkaar.
+	<p>		
+		Pas wanneer de verantwoordelijke groep helemaal tevreden is met de nieuwe code. Kan de gehele set van benodigde wijzigingen worden toegevoegd.
+	</p>
+	<p>
+		Ten slotte is het daarna mogelijk om de branch op te heffen. Dit is afhankelijk van de ontwikkel methode die het team hanteerd. (Zie ook git flow.)
+	</p>
+	<h2>GIT Branch Commando's</h2>
+	<h3>Start een nieuwe tak met wijzigingen</h3>
+	<pre class="code">git branch [<i>branchnaam</i>]</pre>	
+	<p>
+		Na het uitvoeren van deze instructie is er een nieuwe tak voorhanden waarin gewerkt kan worden.
+	</p>
+	<h3>Wisselen naar een andere branch</h3>
+	<pre class="code">git checkout [<i>branchnaam</i>]</pre>
+	<p>
+		Dit commando geeft aan dat je gaat werken met de genoemde branch. Dat kan helemaal aan het begin zijn, als de branch nog leeg is. Maar het is ook mogelijk om later aan te sluiten.
+	</p>
+	<p>
+		In dat laatste geval worden de meest recente wijzigingen die al in de branch zijn gecommit gesynchroniseerd met jouw working directory. En kun je het werk doorzetten.
+	</p>
+	<p>
+		Het is ook mogelijk om terug te gaan naar de hoofd branch. In dat geval wordt jouw working directory voorzien van alle code die daar beschikbaar is. Maar verlies je de wijzigingen die alleen nog maar in de sub-branch gemaakt zijn.
+	</p>
+	<h3>Re&iuml;ntegratie</h3>
+	<pre class="code">git merge [<i>branchnaam</i>] --no-commit</pre>
+	<p>
+		Terwijl je werkt aan een sub-branch loopt de lijst van wijzigingen ten opzichte van de rest van de hoofd branch steeds verder uit elkaar. De nieuwe branch en de hoofdbranch bevatten dan steeds meer verschillen. Sommige daarvan kunnen niet automatisch overgenomen worden.		
+	</p>
+	<p>
+		Om er voor te zorgen dat jouw branch en alle wijzigingen die daarin zitten zoveel mogelijk &quot;compatible&quot; moet je dagelijks het pull commando blijven uitvoeren.
+	</p>
+</body>
+</html>
