@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title>ROC van Twente - GIT project</title>
+	<link rel="stylesheet" href="styles/style.css" type="text/css" />
+</head>
+<body>
+	<h1>Samenwerken</h1>
+	<h2>Herhaling</h2>
+	<p>
+		GIT kan wijzigingen in tekst bestanden herkennen en opslaan.
+		Op die manier is het makkelijk om bij te houden wat er veranderd
+		is gedurende het project en ook wie die wijzigingen gemaakt heeft.
+	</p>
+	<h3>Commando's</h3>
+	<ul>
+		<li><span class="code">git status</span></li>
+		<li><span class="code">git add [file]</span></li>
+		<li><span class="code">git add -m "[message]"</span></li>
+	</ul>
+	<p>
+		GIT houdt die informatie bij in de <i>.git</i> map. (<span class="code">git init</span>)
+		Dit is in principe een soort database met alle informatie er in
+		over de inhoud, de wijzigingen en de status van alle bestanden
+		in de &quot;<i>Working Directory</i>&quot;.<br />
+		In de staging area worden alle bestanden die horen bij een wijziging verzameld. (<span class="code">git add [<i>filename</i>]</span>)<br />
+		Waarna de hele wijziging als &eacute;&eacute;n set toegevoegd worden aan de local repository.  Voorzien van het juiste commentaar. (<span class="code">git commit -m "<i>Jouw commentaar</i>"]</span>)<br />
+		Ook zonder centrale GIT server is het altijd een goed idee om wijzigingen bij te houden met de bekende commando's. Om wijzigingen te delen met de rest van het ontwikkelteam is zo'n centrale server essentieel.
+	</p>
+	<h2>GIT Hub</h2>
+	<h3>Account</h3>
+	<ul>
+		<li><a href="https://github.com">Github</a></li>
+		<li><a href="https://bitbucket.org/">BitBucket</a></li>
+		<li><a href="https://sourceforge.net/">SourceForge</a></li>
+	</ul>	
+	<p>
+		De meeste openbare GIT servers zoals bieden een gratis account aan. Voor betaling zijn uitgebreidere features beschikbaar.
+		Maar voorlopig is gratis goed.
+	</p>
+	<h3>Nieuw project</h3>
+	<p>
+		Om jouw code te synchroniseren met de server moet je eerst een nieuw project aanmaken op de server. Dit resulteert (bij github) in een link die er uitziet als: <span class="code">https://github.com/YourUserName/YourProjectName.git</span>
+	</p>
+	<p>
+		Deze link wil je koppelen aan jouw GITBash installatie:
+	</p>
+	<pre>git remote add [name] [link]</pre>
+	<p>
+		Bijvoorbeeld:
+	</p>
+	<pre>git remote add origin https://github.com/FrederikBonte/2021_0sv1_team1.git</pre>
+	<h3>git pull</h3>
+	<pre class="code">git pull</pre>
+	<p>
+		Haal de meest recente wijzigingen van de server (remote) repository naar de lokale repository toe.
+	</p>
+	<h3>git push</h3>
+	<pre class="code">git push</pre>
+	<p>
+		Deel alle wijzigingen uit de local repository die nog niet aan de (remote) server repository zijn toegevoegd.<br />
+		Daarna kan jouw team met <span class="code">git pull</span> jouw wijzigingen toevoegen aan hun omgeving.
+	</p>
+</body>
+</html>
