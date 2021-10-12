@@ -14,14 +14,37 @@ function chooseColor(color, targetId="target")
 			break;
 		}
 		case 2: {
-			// Continue for all other colors...
-			// At least: yellow, green, blue, purple, black and white
-			// Let the other team know which color goes with each number!!!
+			target.style.backgroundColor = "orange";
+			target.style.color = "white";
+		}
+		case 3: {
+			target.style.backgroundColor = "blue";
+			target.style.color = "white";
+		}
+		case 2: {
+			target.style.backgroundColor = "red";
+			target.style.color = "white";
+		}
+		case 2: {
+			target.style.backgroundColor = "red";
+			target.style.color = "white";
+		}
+		case 2: {
+			target.style.backgroundColor = "red";
+			target.style.color = "white";
+		}
+		case 2: {
+			target.style.backgroundColor = "red";
+			target.style.color = "white";
+		}
+		case 2: {
+			target.style.backgroundColor = "red";
+			target.style.color = "white";
 		}
 		default: {
 			target.style.backgroundColor = "lightgray";
 			target.style.color = "darkgray";
 		}
-		
+
 	}
 }
