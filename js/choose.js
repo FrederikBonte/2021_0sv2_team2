@@ -30,7 +30,7 @@ function chooseColor(color, targetId="target")
 			target.style.color = "white";
 		}
 		case 6: {
-			target.style.backgroundColor = "grey";
+			target.style.backgroundColor = "gray";
 			target.style.color = "white";
 		}
 		case 7: {
