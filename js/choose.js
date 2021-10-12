@@ -15,30 +15,30 @@ function chooseColor(color, targetId="target")
 		}
 		case 2: {
 			target.style.backgroundColor = "orange";
-			target.style.color = "white";
+			target.style.color = "black";
 		}
 		case 3: {
 			target.style.backgroundColor = "blue";
 			target.style.color = "white";
 		}
-		case 2: {
-			target.style.backgroundColor = "red";
+		case 4: {
+			target.style.backgroundColor = "yellow";
+			target.style.color = "black";
+		}
+		case 5: {
+			target.style.backgroundColor = "black";
 			target.style.color = "white";
 		}
-		case 2: {
-			target.style.backgroundColor = "red";
+		case 6: {
+			target.style.backgroundColor = "grey";
 			target.style.color = "white";
 		}
-		case 2: {
-			target.style.backgroundColor = "red";
+		case 7: {
+			target.style.backgroundColor = "pink";
 			target.style.color = "white";
 		}
-		case 2: {
-			target.style.backgroundColor = "red";
-			target.style.color = "white";
-		}
-		case 2: {
-			target.style.backgroundColor = "red";
+		case 8: {
+			target.style.backgroundColor = "green";
 			target.style.color = "white";
 		}
 		default: {
